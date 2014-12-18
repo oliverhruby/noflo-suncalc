@@ -11,14 +11,18 @@
   "scripts": [
     "index.js",
     "vendor/suncalc.js",
-    "components/SunCalc.coffee"
+    "components/SunPosition.coffee",
+    "components/MoonPosition.coffee",
+    "components/MoonIllumination.coffee",
   ],
   "json": [
     "component.json"
   ],
   "noflo": {
     "components": {
-      "SunCalc": "components/SunCalc.coffee"
+      "SunPosition": "components/SunPosition.coffee",
+      "MoonPosition": "components/MoonPosition.coffee",
+      "MoonIllumination": "components/MoonIllumination.coffee"
     }
   }
 }
