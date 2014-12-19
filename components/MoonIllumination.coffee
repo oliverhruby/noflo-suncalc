@@ -32,4 +32,4 @@ exports.getComponent = ->
     if c.outPorts.angle.isAttached()
       c.outPorts.angle.send c.obj.angle
 
-  c 
+  c

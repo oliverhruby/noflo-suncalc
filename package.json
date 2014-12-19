@@ -38,10 +38,9 @@
   "keywords": [],
   "noflo": {
     "components": {
-      "DeviceMotion": "components/DeviceMotion.coffee",
-      "DeviceOrientation": "components/DeviceOrientation.coffee",
-      "Geolocation": "components/Geolocation.coffee",
-      "SpeechSynthesis": "components/SpeechSynthesis.coffee"
+      "MoonIllumination": "components/MoonIllumination.coffee",
+      "MoonPosition": "components/MoonPosition.coffee",
+      "SunPosition": "components/SunPosition.coffee"
     }
   }
 }

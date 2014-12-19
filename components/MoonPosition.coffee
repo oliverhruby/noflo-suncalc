@@ -39,4 +39,4 @@ exports.getComponent = ->
     if c.outPorts.distance.isAttached()
       c.outPorts.distance.send c.obj.distance
 
-  c 
+  c

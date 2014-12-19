@@ -13,16 +13,16 @@
     "vendor/suncalc.js",
     "components/SunPosition.coffee",
     "components/MoonPosition.coffee",
-    "components/MoonIllumination.coffee",
+    "components/MoonIllumination.coffee"
   ],
   "json": [
     "component.json"
   ],
   "noflo": {
     "components": {
-      "SunPosition": "components/SunPosition.coffee",
+      "MoonIllumination": "components/MoonIllumination.coffee",
       "MoonPosition": "components/MoonPosition.coffee",
-      "MoonIllumination": "components/MoonIllumination.coffee"
+      "SunPosition": "components/SunPosition.coffee"
     }
   }
 }

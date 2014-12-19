@@ -34,4 +34,4 @@ exports.getComponent = ->
     if c.outPorts.azimuth.isAttached()
       c.outPorts.azimuth.send c.obj.azimuth
 
-  c 
+  c
