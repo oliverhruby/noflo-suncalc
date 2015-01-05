@@ -3,8 +3,7 @@ unless noflo.isBrowser()
   chai = require 'chai' unless chai
   MoonPosition = require '../components/MoonPosition.coffee'
 else
-  MoonPosition = require 'noflo-sensors/components/MoonPosition.js'
-noflo = require 'noflo'
+  MoonPosition = require 'noflo-suncalc/components/MoonPosition.js'
 
 describe 'MoonPosition component', ->
   c = null
@@ -34,3 +33,21 @@ describe 'MoonPosition component', ->
       chai.expect(c.outPorts.altitude).to.be.an 'object'
       chai.expect(c.outPorts.azimuth).to.be.an 'object'
       chai.expect(c.outPorts.distance).to.be.an 'object'
+    it 'should output altitude', (done) ->
+      altitude.once 'data', (res) ->
+        chai.expect(Math.abs(res)).to.be.above 0
+        done()
+      latitude.send 0
+      longitude.send 0
+    it 'should output azimuth', (done) ->
+      altitude.once 'data', (res) ->
+        chai.expect(Math.abs(res)).to.be.above 0
+        done()
+      latitude.send 0
+      longitude.send 0
+    it 'should output distance', (done) ->
+      altitude.once 'data', (res) ->
+        chai.expect(Math.abs(res)).to.be.above 0
+        done()
+      latitude.send 0
+      longitude.send 0
