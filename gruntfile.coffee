@@ -25,7 +25,7 @@ module.exports = ->
     noflo_browser:
       build:
         files:
-          'browser/noflo-sensors.js': ['component.json']
+          'browser/noflo-suncalc.js': ['component.json']
 
     # JavaScript minification for the browser
     uglify:
@@ -33,7 +33,7 @@ module.exports = ->
         report: 'min'
       noflo:
         files:
-          './browser/noflo-sensors.min.js': ['./browser/noflo-sensors.js']
+          './browser/noflo-suncalc.min.js': ['./browser/noflo-suncalc.js']
 
     # Automated recompilation and testing when developing
     watch:
@@ -75,7 +75,6 @@ module.exports = ->
 
   # Our local tasks
   @registerTask 'build', 'Build NoFlo for the chosen target platform', (target = 'all') =>
-    @task.run 'coffee'
     @task.run 'noflo_manifest'
     if target is 'all' or target is 'browser'
       @task.run 'noflo_browser'
@@ -83,12 +82,12 @@ module.exports = ->
 
   @registerTask 'test', 'Build NoFlo and run automated tests', (target = 'all') =>
     @task.run 'coffeelint'
-    @task.run 'coffee'
     @task.run 'noflo_manifest'
     if target is 'all' or target is 'nodejs'
       @task.run 'cafemocha'
     if target is 'all' or target is 'browser'
       @task.run 'noflo_browser'
+      @task.run 'coffee'
       @task.run 'mocha_phantomjs'
 
   @registerTask 'default', ['test']

@@ -3,22 +3,26 @@
   "description": "Sun and moon calculations for noflo",
   "author": "Oliver Hruby <oliverhruby@gmail.com>",
   "repo": "oliverhruby/noflo-suncalc",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "keywords": [],
   "dependencies": {
     "noflo/noflo": "*"
   },
   "scripts": [
-    "index.js",
-    "vendor/suncalc.js",
     "components/SunPosition.coffee",
     "components/MoonPosition.coffee",
-    "components/MoonIllumination.coffee"
+    "components/MoonIllumination.coffee",
+    "vendor/suncalc.js",
+    "index.js"
+  ],
+  "files": [
+    "vendor/suncalc.js"
   ],
   "json": [
     "component.json"
   ],
   "noflo": {
+    "icon": "sun-o",
     "components": {
       "MoonIllumination": "components/MoonIllumination.coffee",
       "MoonPosition": "components/MoonPosition.coffee",
