@@ -15,9 +15,6 @@
     "components/MoonPosition.coffee",
     "components/MoonIllumination.coffee"
   ],
-  "files": [
-    "vendor/suncalc.js"
-  ],
   "json": [
     "component.json"
   ],
